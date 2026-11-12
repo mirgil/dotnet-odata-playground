@@ -1,4 +1,4 @@
-@OdataSample_HostAddress = http://localhost:5172
+@OdataSample_HostAddress = http://localhost:5000
 
 //A sample request to test the OData parameters
 
@@ -9,7 +9,7 @@ Accept: application/json
 //A sample of a batch request with a single GET operation - the odata parameters are sent in the request body, not in the URL. 
 //This is a workaround for sending a large parameter list in a GET request, which can exceed the maximum URL length limit.
 
-POST http://localhost:5172/odata/$batch  HTTP/1.1
+POST {{OdataSample_HostAddress}}/odata/$batch  HTTP/1.1
 Content-Type: multipart/mixed; boundary=batch_123
 
 --batch_123
